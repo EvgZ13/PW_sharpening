@@ -12,7 +12,7 @@ items.forEach(element => {
         let chance = 0
         switch (sharpening.innerText) {
             case '0':
-                chance = 0.6
+                chance = 0.65
                 break;
             case '1':
                 chance = 0.45
