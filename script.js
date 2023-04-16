@@ -1,18 +1,29 @@
 const items = document.querySelectorAll('.item')
 let fullHistory = document.querySelector('.full-history')
+let mirageCounter = document.querySelector('.mirage-counter')
+let skyCounter = document.querySelector('.sky-counter')
+let undergroundCounter = document.querySelector('.underground-counter')
+let universeCounter = document.querySelector('.universe-counter')
+var summ = document.querySelector('.summ')
+let miragePrice = document.querySelector('.mirage-price')
+let stonePrice = document.querySelector('.stone-price')
 
 function random() {
     return Math.random()
 }
 
+function summCount() {
+    summ.innerText = (mirageCounter.innerText * miragePrice.value) + (skyCounter.innerText * stonePrice.value) + (undergroundCounter.innerText * stonePrice.value) + (universeCounter.innerText * stonePrice.value)
+}
+
 items.forEach(element => {
     let sharpening = element.querySelector('.sharpening')
-
 
     // Заточка небесным камнем
     let sky = element.querySelector('.sky')
     sky.addEventListener('click', () => {
-
+        skyCounter.innerText++
+        mirageCounter.innerText++
         let chance = 0
         let history = element.querySelector('.history')
 
@@ -61,7 +72,7 @@ items.forEach(element => {
             default:
                 console.log('default');
         }
-
+        summCount()
 
         if (random() < chance) {
             sharpening.innerText++
@@ -77,7 +88,8 @@ items.forEach(element => {
     // Заточка подземным камнем
     let underground = element.querySelector('.underground')
     underground.addEventListener('click', () => {
-
+        undergroundCounter.innerText++
+        mirageCounter.innerText++
         let chance = 0
         let history = element.querySelector('.history')
         switch (sharpening.innerText) {
@@ -123,7 +135,7 @@ items.forEach(element => {
             default:
                 console.log('default');
         }
-
+        summCount()
         if (sharpening.innerText != '0') {
             if (random() < chance) {
                 sharpening.innerText++
@@ -150,6 +162,7 @@ items.forEach(element => {
     // Заточка миражом
     let mirage = element.querySelector('.mirage')
     mirage.addEventListener('click', () => {
+        mirageCounter.innerText++
         let chance = 0
         let history = element.querySelector('.history')
         // let mirageChance = element.querySelector('.mirage-chance')
@@ -197,6 +210,7 @@ items.forEach(element => {
                 console.log('default');
         }
 
+        summCount()
         // mirageChance.innerText == sharpening.innerText
         if (random() < chance) {
             sharpening.innerText++
@@ -212,6 +226,8 @@ items.forEach(element => {
     // Заточка камнем мироздания
     let universe = element.querySelector('.universe')
     universe.addEventListener('click', () => {
+        universeCounter.innerText++
+        mirageCounter.innerText++
         let chance = 0
         let history = element.querySelector('.history')
         switch (sharpening.innerText) {
@@ -257,6 +273,7 @@ items.forEach(element => {
             default:
                 console.log('default');
         }
+        summCount()
         if (random() < chance) {
             sharpening.innerText++
             history.innerHTML += '<p class="plus">+</p>'

@@ -17,7 +17,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 h1 {
@@ -47,7 +46,7 @@ p {
 }
 
 .item {
-    border: 1px solid #000;
+    border: 2px solid #000;
     margin: 20px;
 }
 
@@ -65,6 +64,62 @@ p {
 .full-history p {
     padding: 0 2px;
     font-size: 24px;
+}
+
+.expenses {
+    width: 100%;
+
+}
+
+.expenses__top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: darkgray;
+}
+
+.price-wrapper {
+    /* width: 300px; */
+}
+
+.price-wrapper p {
+    /* width: 300px; */
+    text-align: center;
+}
+
+.price-wrapper input {
+    width: 120px;
+    text-align: right;
+    padding: 0 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.expenses__center {
+    background-color: gray;
+}
+
+.expenses__bottom {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: gray; */
+    background-color: darkgray;
+}
+
+.expenses__bottom div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expenses__bottom div p {
+    padding-left: 10px;
 }
 
 .items {
