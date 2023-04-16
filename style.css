@@ -51,6 +51,29 @@ p {
     margin: 20px;
 }
 
+.full-history {
+    background: gray;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.full-history p {
+    padding: 0 2px;
+    font-size: 24px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .item__top {
     display: flex;
     align-items: center;
@@ -116,6 +139,11 @@ p {
 
 .item__bottom button:active {
     outline: 2px solid gray;
+}
+
+.stones p {
+    text-align: center;
+    font-size: 14px;
 }
 
 .versions {

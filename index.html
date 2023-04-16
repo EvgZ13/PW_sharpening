@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Симулятор заточки perfect world</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -13,70 +13,87 @@
 <body>
     <header>
         <div class="container">
-            <h1>Симулятор заточки perfect world v0.02 beta</h1>
+            <h1>Симулятор заточки perfect world v0.03 beta</h1>
             <p>В симуляторе реализована заточка с помощью всех доступных в pw камней. Данные о шансах заточки
                 взяты на просторах интернета, но после небольшого тестирования они похожи на правдивые.</p>
-            <p>Данная версия сделана после предночного озарения за час. В ближайшие дни будет изменён дизайн, добавлена
-                история заточки, счётчики камней и возможно что-то ещё.</p>
         </div>
     </header>
     <main>
         <div class="container">
-            <div class="item">
-                <div class="item__top">
-                    <div class="sharpening">0</div>
-                </div>
-                <div class="item__center history">
-                </div>
-                <div class="item__bottom">
-                    <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
-                    <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
-                    <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
-                    <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
-                    <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
-                </div>
+            <div class="full-history">
             </div>
-            <div class="item">
-                <div class="item__top">
-                    <div class="sharpening">0</div>
+            <div class="items">
+                <div class="item">
+                    <div class="item__top">
+                        <div class="sharpening">0</div>
+                    </div>
+                    <div class="item__center history">
+                    </div>
+                    <div class="item__bottom stones">
+                        <div>
+                            <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
+                            <!-- <p class="mirage-chance">35%</p> -->
+                        </div>
+                        <div>
+                            <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
+                            <!-- <p class="sky-chance">65%</p> -->
+                        </div>
+                        <div>
+                            <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
+                            <!-- <p class="underground-chance">53.5%</p> -->
+                        </div>
+                        <div>
+                            <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
+                            <!-- <p class="universe-chance">100%</p> -->
+                        </div>
+                        <div>
+                            <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
+                            <!-- <p class="dragon-chance">100%</p> -->
+                        </div>
+                    </div>
                 </div>
-                <div class="item__center history">
+                <div class="item">
+                    <div class="item__top">
+                        <div class="sharpening">0</div>
+                    </div>
+                    <div class="item__center history">
 
+                    </div>
+                    <div class="item__bottom">
+                        <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
+                        <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
+                        <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
+                        <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
+                        <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
+                    </div>
                 </div>
-                <div class="item__bottom">
-                    <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
-                    <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
-                    <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
-                    <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
-                    <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
+                <div class="item">
+                    <div class="item__top">
+                        <div class="sharpening">0</div>
+                    </div>
+                    <div class="item__center history">
+                    </div>
+                    <div class="item__bottom">
+                        <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
+                        <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
+                        <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
+                        <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
+                        <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="item__top">
-                    <div class="sharpening">0</div>
-                </div>
-                <div class="item__center history">
-                </div>
-                <div class="item__bottom">
-                    <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
-                    <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
-                    <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
-                    <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
-                    <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item__top">
-                    <div class="sharpening">0</div>
-                </div>
-                <div class="item__center history">
-                </div>
-                <div class="item__bottom">
-                    <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
-                    <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
-                    <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
-                    <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
-                    <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
+                <div class="item">
+                    <div class="item__top">
+                        <div class="sharpening">0</div>
+                    </div>
+                    <div class="item__center history">
+                    </div>
+                    <div class="item__bottom">
+                        <button class="mirage"><img src="img/mirage.jpg" alt="Мираж"></button>
+                        <button class="sky"><img src="img/sky.jpg" alt="Небеска"></button>
+                        <button class="underground"><img src="img/underground.jpg" alt="Подземка"></button>
+                        <button class="universe"><img src="img/universe.jpg" alt="Мирозданка"></button>
+                        <button class="dragon"><img src="img/dragon.png" alt="Шар дракона"></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,8 +101,9 @@
     <footer>
         <div class="container">
             <div class="versions">
-                <p class="">v0.01<br> - ОН появился</p>
-                <p class="">v0.02<br> - добавлена индивидуальная история заточки <br>- добавлены иконки камней</p>
+                <p>v0.01<br> - ОН появился</p>
+                <p>v0.02<br> - добавлена индивидуальная история заточки <br>- добавлены иконки камней</p>
+                <p>v0.03<br> - добавлена общая история заточки</p>
             </div>
         </div>
     </footer>
