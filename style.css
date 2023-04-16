@@ -188,12 +188,12 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
-.item__bottom button:hover {
-    outline: 2px solid lightgray;
+.item button:hover {
+    outline: 2px solid gray;
 }
 
-.item__bottom button:active {
-    outline: 2px solid gray;
+.item button:active {
+    outline: 2px solid black;
 }
 
 .stones p {
