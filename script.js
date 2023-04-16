@@ -10,6 +10,7 @@ items.forEach(element => {
     let sky = element.querySelector('.sky')
     sky.addEventListener('click', () => {
         let chance = 0
+        let history = element.querySelector('.history')
         switch (sharpening.innerText) {
             case '0':
                 chance = 0.65
@@ -56,8 +57,10 @@ items.forEach(element => {
 
         if (random() < chance) {
             sharpening.innerText++
+            history.innerHTML += '<p class="plus">+</p>'
         } else {
             sharpening.innerText = 0
+            history.innerHTML += '<p class="minus">0</p>'
         }
     })
 
@@ -66,6 +69,7 @@ items.forEach(element => {
     underground.addEventListener('click', () => {
 
         let chance = 0
+        let history = element.querySelector('.history')
         switch (sharpening.innerText) {
             case '0':
                 chance = 0.535
@@ -113,14 +117,18 @@ items.forEach(element => {
         if (sharpening.innerText != '0') {
             if (random() < chance) {
                 sharpening.innerText++
+                history.innerHTML += '<p class="plus">+</p>'
             } else {
                 sharpening.innerText--
+                history.innerHTML += '<p class="minus">-</p>'
             }
         } else {
             if (random() < chance) {
                 sharpening.innerText++
+                history.innerHTML += '<p class="plus">+</p>'
             } else {
                 sharpening.innerText = '0'
+                history.innerHTML += '<p class="minus">-</p>'
             }
         }
     })
@@ -129,6 +137,7 @@ items.forEach(element => {
     let mirage = element.querySelector('.mirage')
     mirage.addEventListener('click', () => {
         let chance = 0
+        let history = element.querySelector('.history')
         switch (sharpening.innerText) {
             case '0':
                 chance = 0.5
@@ -174,8 +183,10 @@ items.forEach(element => {
         }
         if (random() < chance) {
             sharpening.innerText++
+            history.innerHTML += '<p class="plus">+</p>'
         } else {
             sharpening.innerText = 0
+            history.innerHTML += '<p class="minus">0</p>'
         }
     })
 
@@ -183,6 +194,7 @@ items.forEach(element => {
     let universe = element.querySelector('.universe')
     universe.addEventListener('click', () => {
         let chance = 0
+        let history = element.querySelector('.history')
         switch (sharpening.innerText) {
             case '0':
                 chance = 1
@@ -228,6 +240,9 @@ items.forEach(element => {
         }
         if (random() < chance) {
             sharpening.innerText++
+            history.innerHTML += '<p class="plus">+</p>'
+        } else {
+            history.innerHTML += '<p class="nothing">=</p>'
         }
     })
 
@@ -235,11 +250,14 @@ items.forEach(element => {
     // Заточка камнем дракона (100%)
     let dragon = element.querySelector('.dragon')
     dragon.addEventListener('click', () => {
+        let history = element.querySelector('.history')
         if (sharpening.innerText != '12') {
             sharpening.innerText++
+            history.innerHTML += '<p class="plus">+</p>'
         }
         else {
             sharpening.innerText = '0'
+            history.innerHTML += '<p class="minus">0</p>'
         }
     })
 });
